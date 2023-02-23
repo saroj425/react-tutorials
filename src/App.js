@@ -9,6 +9,10 @@ import {BrowserRouter as Router, Switch,Route,Link, Routes} from 'react-router-d
 import About from './components/About';
 import Products from './components/Products';
 import Errorpage from './components/Errorpage';
+import Contact from './components/Contact';
+import { Facebook } from './components/Facebook';
+import { Insta } from './components/Insta';
+import { Google } from './components/Google';
 
 function App() {
   return (
@@ -23,6 +27,11 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/products' element={<Products/>}/>
+          <Route path='/contact' element={<Contact/>}>
+            <Route path='facebook' element={<Facebook/>}/>
+            <Route path='insta' element={<Insta/>}/>
+            <Route path='google' element={<Google/>}/>
+          </Route>
           <Route path='*' element={<Errorpage/>}/>
         </Routes>
     </div>
